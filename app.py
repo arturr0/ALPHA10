@@ -32,4 +32,4 @@ def index():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     # Use 0.0.0.0 to bind to all available interfaces
-    socketio.run(app, host='alphawebs-44dc59c55971.herokuapp.com', port=port, debug=True)
+    socketio.run(app, host='0.0.0.0', port=port, debug=True)
