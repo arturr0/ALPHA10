@@ -10,24 +10,6 @@
     Client1
     <button onclick="sendMsg()">Send Msg</button>
 
-    <script>
-        const socket = io.connect('http://localhost:5000');
-
-        socket.on('connect', () => {
-            console.log('Connected to the WebSocket server!');
-        });
-
-        socket.on('disconnect', () => {
-            console.log('Disconnected from the WebSocket server!');
-        });
-
-        socket.on('message', (data) => {
-            console.log('Message from server:', data);
-        });
-
-        const sendMsg = () => {
-            socket.emit('message', 'Hello from Client1!');
-        };
-    </script>
+   
 </body>
 </html>
