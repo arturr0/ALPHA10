@@ -14,7 +14,7 @@
 
 runtime: python
 env: flex
-entrypoint: gunicorn -b :$PORT main:app
+entrypoint: gunicorn app:app
 
 
 # This sample incurs costs to run on the App Engine flexible environment.
