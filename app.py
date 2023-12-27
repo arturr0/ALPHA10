@@ -1,6 +1,4 @@
 import os
-import asyncio
-import websockets
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO
 
@@ -32,6 +30,6 @@ def index():
 
 # Use os.environ.get('PORT') to get the port provided by Heroku
 if __name__ == '__main__':
-    port = process.env.PORT
+    port = int(os.environ.get('PORT', 5000))
     # Use 0.0.0.0 to bind to all available interfaces
     socketio.run(app, host='0.0.0.0', port=port, debug=True)
