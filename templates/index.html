@@ -11,9 +11,7 @@
     <button onclick="sendMsg()">Send Msg</button>
 
     <script>
-        const socket = io("ws://echo.websocket.org", {
-          transports: ["websocket"]
-        });
+        const socket = io("https://alphawebs-44dc59c55971.herokuapp.com/");
 
         socket.on('connect', () => {
             console.log('Connected to the WebSocket server!');
